@@ -8,7 +8,6 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
   },
-  groups: ['admin'],  
   userAttributes: {
     preferredUsername: {
       mutable: true,
