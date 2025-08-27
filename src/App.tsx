@@ -23,10 +23,10 @@ interface AmplifyUser {
 }
 
 function App() {
-  const customUser = user as AmplifyUser;
   return (
     <Authenticator>
       {({ signOut, user }) => (
+          const customUser = user as AmplifyUser;
         <>
           <div className="header">
             <h1>{`Hello ${customUser?.attributes?.email ?? "unknown"}`}</h1>
