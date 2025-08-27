@@ -20,7 +20,7 @@ function App() {
       {({ signOut, user }) => (
         <>
           <div className="header">
-            <h1>{`Hello ${user?.family_name}`}</h1>
+            <h1>{`Hello ${user?.family_name?}`}</h1>
             <Button onClick={signOut}>Sign out</Button>
           </div>
           <StorageBrowser />
