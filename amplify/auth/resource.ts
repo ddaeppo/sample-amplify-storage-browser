@@ -9,7 +9,7 @@ export const auth = defineAuth({
     email: true,
   },
   userAttributes: {
-    email: {
+    fullname: {
       mutable: false,
       required: true
     }
