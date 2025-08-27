@@ -14,13 +14,22 @@ const { StorageBrowser } = createStorageBrowser({
   config: createAmplifyAuthAdapter(),
 });
 
+interface AmplifyUser {
+  attributes: {
+    email?: string;
+    [key: string]: any;
+  };
+  username?: string;
+}
+
 function App() {
+  const customUser = user as AmplifyUser;
   return (
     <Authenticator>
       {({ signOut, user }) => (
         <>
           <div className="header">
-            <h1>{`Hello ${user?.attributes?.email}`}</h1>
+            <h1>{`Hello ${customUser?.attributes?.email ?? "unknown"}`}</h1>
             <Button onClick={signOut}>Sign out</Button>
           </div>
           <StorageBrowser />
