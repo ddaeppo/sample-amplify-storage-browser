@@ -15,10 +15,10 @@ const { StorageBrowser } = createStorageBrowser({
 });
 
 function App() {
+  const customUser = user as AmplifyUser;
   return (
     <Authenticator>
       {({ signOut, user }) => (
-        customUser = user as AmplifyUser;
         <>
           <div className="header">
             <h1>{`Hello ${user?.username ?? "unknown"}`}</h1>
