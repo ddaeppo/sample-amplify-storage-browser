@@ -12,13 +12,13 @@ export const auth = defineAuth({
   userAttributes: {
     // Maps to Cognito standard attribute 'preferred_username'
     preferredUsername: {
-      mutable: true,
-      required: false
+      mutable: false,
+      required: true
     },
     // Maps to Cognito standard attribute 'given_name'
     givenName: {
-      mutable: true,
-      required: false,
+      mutable: false,
+      required: true,
     },
   }
 });
