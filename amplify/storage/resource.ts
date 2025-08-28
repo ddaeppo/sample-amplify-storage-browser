@@ -18,7 +18,7 @@ export const storage = defineStorage({
     'privates/{cognito-identity.amazonaws.com:email}/*': [
         allow.entity('identity').to(['read', 'write', 'delete'])
     ],
-    'foo/{entity_id}/*': [
+    'foo/{cognito-identity.amazonaws.com:email}/*': [
         allow.entity('identity').to(['read', 'write', 'delete'])
     ],
     
