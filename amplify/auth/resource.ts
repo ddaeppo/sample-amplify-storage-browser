@@ -8,5 +8,17 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
   },
-  groups: ['admin']
+  groups: ['admin'], 
+  userAttributes: {
+    // Maps to Cognito standard attribute 'preferred_username'
+    preferredUsername: {
+      mutable: true,
+      required: false
+    },
+    // Maps to Cognito standard attribute 'given_name'
+    givenName: {
+      mutable: true,
+      required: false,
+    },
+  }
 });
