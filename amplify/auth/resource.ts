@@ -31,6 +31,7 @@ interface AmplifyUser {
   username?: string;
 }
 
+/*
 const customUser = user as AmplifyUser;
 console.log(customUser.attributes.preferred_username);
-
+*/
