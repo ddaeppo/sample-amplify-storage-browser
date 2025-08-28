@@ -20,8 +20,7 @@ export const storage = defineStorage({
     ],
     'foo/{cognito-identity.amazonaws.com:sub}/*': [
         allow.entity('identity').to(['read', 'write', 'delete'])
-    ],
-    
+    ]
    })
 });
 
