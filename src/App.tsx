@@ -18,9 +18,10 @@ function App() {
   return (
     <Authenticator>
       {({ signOut, user }) => (
+        const customUser = user as AmplifyUser;
         <>
           <div className="header">
-            <h1>{`Hello ${user?.attributes?.preferred_username ?? "unknown"}`}</h1>
+            <h1>{`Hello ${user?.username ?? "unknown"}`}</h1>
             <Button onClick={signOut}>Sign out</Button>
           </div>
           <StorageBrowser />
