@@ -23,15 +23,4 @@ export const auth = defineAuth({
   }
 });
 
-interface AmplifyUser {
-  attributes: {
-    preferred_username?: string;
-    [key: string]: any;
-  };
-  username?: string;
-}
 
-/*
-const customUser = user as AmplifyUser;
-console.log(customUser.attributes.preferred_username);
-*/
